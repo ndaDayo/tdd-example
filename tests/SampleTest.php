@@ -6,14 +6,22 @@ use PHPUnit\Framework\TestCase;
 class SampleTest extends TestCase
 {
     /**
+     * @var Sample
+     */
+    private $sample;
+
+    protected function setUp()
+    {
+       $this->sample = new Sample();
+    }
+
+    /**
      * @test
      */
     public function 文字列Rを渡した時、文字列Yesを返す()
     {
-        $sample = new Sample();
-        $this->assertSame('Yes',$sample->solve('R'));
+        $this->assertSame('Yes',$this->sample->solve('R'));
     }
-
 
     /**
      * @test
@@ -21,6 +29,6 @@ class SampleTest extends TestCase
     public function 文字列Lを渡した時、文字列Noを返す()
     {
         $sample = new Sample();
-        $this->assertSame('No',$sample->solve('L'));
+        $this->assertSame('No',$this->sample->solve('L'));
     }
 }
