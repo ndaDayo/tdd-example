@@ -13,6 +13,12 @@ class Sample
                 return 'No';
             }
         }
+
+        for ($i = 1; $i < $len; $i += 2) {
+            if ($input[$i] === 'R') {
+                return 'No';
+            }
+        }
         return 'Yes';
     }
 }
