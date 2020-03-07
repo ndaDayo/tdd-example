@@ -8,11 +8,9 @@ class Sample
     {
         $len = strlen($input);
 
-        for ($i = 0; $i < $len; $i ++) {
-            if ($i % 2 === 0 && $input[$i] === 'L') {
-                return 'No';
-            }
-            if ($i % 2 === 1 && $input[$i] === 'R') {
+        for ($i = 0; $i < $len; $i++) {
+            $currentChar = $input[$i];
+            if ($i % 2 === 0 && $currentChar === 'L' || $i % 2 === 1 && $currentChar === 'R') {
                 return 'No';
             }
         }
