@@ -12,7 +12,7 @@ class SampleTest extends TestCase
 
     protected function setUp()
     {
-       $this->sample = new Sample();
+        $this->sample = new Sample();
     }
 
     /**
@@ -20,7 +20,7 @@ class SampleTest extends TestCase
      */
     public function 文字列Rを渡した時、文字列Yesを返す()
     {
-        $this->assertSame('Yes',$this->sample->solve('R'));
+        $this->assertSame('Yes', $this->sample->solve('R'));
     }
 
     /**
@@ -28,7 +28,7 @@ class SampleTest extends TestCase
      */
     public function 文字列Lを渡した時、文字列Noを返す()
     {
-        $this->assertSame('No',$this->sample->solve('L'));
+        $this->assertSame('No', $this->sample->solve('L'));
     }
 
     /**
@@ -36,6 +36,14 @@ class SampleTest extends TestCase
      */
     public function 文字列UULを渡した時、文字列Noを返す()
     {
-        $this->assertSame('No',$this->sample->solve('UUL'));
+        $this->assertSame('No', $this->sample->solve('UUL'));
+    }
+
+    /**
+     * @test
+     */
+    public function 文字列URUを渡した時、文字列Noを返す()
+    {
+        $this->assertSame('No', $this->sample->solve('URU'));
     }
 }
