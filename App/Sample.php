@@ -8,14 +8,11 @@ class Sample
     {
         $len = strlen($input);
 
-        for ($i = 0; $i < $len; $i += 2) {
-            if ($input[$i] === 'L') {
+        for ($i = 0; $i < $len; $i ++) {
+            if ($i % 2 === 0 && $input[$i] === 'L') {
                 return 'No';
             }
-        }
-
-        for ($i = 1; $i < $len; $i += 2) {
-            if ($input[$i] === 'R') {
+            if ($i % 2 === 1 && $input[$i] === 'R') {
                 return 'No';
             }
         }
