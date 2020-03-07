@@ -28,7 +28,7 @@ class SampleTest extends TestCase
      */
     public function 文字列Lを渡した時、文字列Noを返す()
     {
-        $sample = new Sample();
         $this->assertSame('No',$this->sample->solve('L'));
     }
+
 }
